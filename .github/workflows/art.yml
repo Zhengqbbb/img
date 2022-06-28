@@ -1,0 +1,19 @@
+name: Use upload artifact
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  publisher:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      git_user: Zhengqbbb
+      git_email: 1074059947@qq.com
+      ___X_CMD_CODESORUCE_REPO: dev
+      CONCURRENCY: 10
+    steps:
+      - name: main
+        uses: x-cmd/action@main
+        with:
+          code: x ws test || true
