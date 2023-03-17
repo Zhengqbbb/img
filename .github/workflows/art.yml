@@ -6,12 +6,13 @@ on:
 jobs:
   publisher:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     env:
       ___X_CMD_GHACTION_X: x1
-      CONCURRENCY: 10
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      git_user: Zhengqbbb
-      git_email: 1074059947@qq.com
+      git_user: agent-zero
+      git_email: 0@x-cmd.com
+      CONCURRENCY: 10
     steps:
       - name: main
         uses: x-cmd/action@main
