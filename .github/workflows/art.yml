@@ -7,13 +7,15 @@ jobs:
   publisher:
     runs-on: ubuntu-latest
     env:
+      ___X_CMD_GHACTION_X: x1
+      CONCURRENCY: 10
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       git_user: Zhengqbbb
       git_email: 1074059947@qq.com
-      ___X_CMD_CODESORUCE_REPO: dev
-      CONCURRENCY: 10
     steps:
       - name: main
         uses: x-cmd/action@main
         with:
           code: x ws test || true
+          artifact_name: artifact
+          artifact_path: ~/work/action/action/ws/.artifact
