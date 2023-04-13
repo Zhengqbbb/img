@@ -6,6 +6,7 @@ on:
 env:
   DAY_OF_WEEK: Monday
 
+# x gh secret set -r Zhengqbbb/img SuperSecret='Hello World!'
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
