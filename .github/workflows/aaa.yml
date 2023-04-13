@@ -15,4 +15,5 @@ jobs:
     steps:
       - name: "Say Hello Mona it's Monday"
         run: |
-          [ "$SuperSecret" = "Hello World!" ] || echo "111"
+          [ "$SUPER_SECRET" = "Hello World!" ] || echo "no-eq"
+          echo "111"
